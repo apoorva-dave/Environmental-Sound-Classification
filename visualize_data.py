@@ -17,8 +17,8 @@ def visualize_wav(oggfile):
     if not os.path.exists('sample_wav'):
         os.mkdir('sample_wav')
 
-    sf.write('sample_wav/new_file.wav', data, samplerate)
-    spf = wave.open('sample_wav/new_file.wav')
+    sf.write('sample_wav/new_file_Fire.wav', data, samplerate)
+    spf = wave.open('sample_wav/new_file_Fire.wav')
     signal = spf.readframes(-1)
     signal = np.fromstring(signal,'Int16')
 
@@ -31,7 +31,7 @@ def visualize_wav(oggfile):
     plt.figure(1)
     plt.title('Signal Wave Vs Time(in sec)')
     plt.plot(Time, signal)
-    plt.savefig('sample_wav/sample_waveplot.png', bbox_inches='tight')
+    plt.savefig('sample_wav/sample_waveplot_Fire.png', bbox_inches='tight')
     plt.show()
 
 if __name__ == "__main__":
